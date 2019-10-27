@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 
 // Serve static files....
-app.use(express.static(__dirname + '/dist/spotifly-app'));
+app.use(express.static(__dirname + '/dist/spotifly'));
 
 // Send all requests to index.html
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/spotifly-app/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/spotifly/index.html'));
 });
 
 // default Heroku PORT
