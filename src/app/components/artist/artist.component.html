@@ -1,0 +1,21 @@
+<div class='container'>
+  <h3 class='text-center py-3'>{{collections[0].artistName}}</h3>
+  
+  <div class='row my-4'>
+    <div class='card col-md-4 col-lg-6 col-sm-3 mb-4' *ngFor='let album of collections'>
+      <div *ngIf='album.collectionId'>
+        <a routerLink='/home/album/{{album.collectionId}}'>
+          <div>
+            <img class='mb-3' width='100%' src={{album.artworkUrl1000}}>
+            
+            <p><strong>Genre</strong> : {{album.primaryGenreName}}</p>
+            <p><strong>Price</strong> : {{album.collectionPrice | currency }}</p>
+            <p><strong>Release Date</strong> : {{album.releaseDate | date }}</p>
+            <hr>
+            <p class='text-center'>{{album.collectionName}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

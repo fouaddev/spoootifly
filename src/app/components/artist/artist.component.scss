@@ -1,0 +1,40 @@
+$text-color: rgb(136, 136, 136);
+
+.container {
+  font-weight: 200;
+
+  .row {
+    
+    .card {
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      div {
+
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: rgb(42, 159, 214);
+          }
+
+          div {
+            font-family: Helvetica;
+            
+            p {
+              font-size: 18px;
+
+              &:not(:last-child) {
+                margin-top: 9px;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+$text-color: rgb(136, 136, 136);
+
+.display-4 {
+  margin: 30px 0;
+}
+
+.row {
+
+  &:hover {
+    opacity: 0.7;
+  }
+  
+  .col-md-12 {
+    margin: 6px 0;
+    text-decoration: none!important;
+
+    .card {
+      border-radius: 9px;
+      padding: 10px;
+      color: $text-color;
+
+      h5, h6 {
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

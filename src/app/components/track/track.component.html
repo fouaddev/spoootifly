@@ -1,0 +1,11 @@
+<div class='container'>
+  <div *ngIf='trackDetails'>
+    <h5>{{trackDetails.trackName}}</h5>
+    <hr>
+
+    <video width="100%" height="" controls>
+      <source src="{{trackDetails.previewUrl}}" type="video/mp4">
+      Your browser does not support the audio element.
+    </video>
+  </div>
+</div>

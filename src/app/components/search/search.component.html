@@ -1,0 +1,25 @@
+<h1 class='display-4 text-capitalize text-center'>looking for music?</h1>
+
+<p class='display-5 text-capitalize text-center'>Browse millions of artists and songs</p>
+
+<form>
+  <div class='form-group'>
+    <input type='text' name='searchStr' [(ngModel)]='searchStr' class='form-control' 
+    (keyup)='searchMusic()' placeholder='Browse by artist or song'>
+  </div>
+</form>
+
+<div *ngIf='searchRes'>
+  <div *ngFor='let artist of searchRes'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class='card well'>
+          <h5><strong>Artist : </strong><a routerLink='/home/artist/{{artist.artistId}}'>{{ artist.artistName }}</a></h5>
+          <h6 *ngIf='artist.collectionId'><em>Album </em>: <a routerLink='/home/album/{{artist.collectionId}}'>{{ artist.collectionName }}</a></h6>
+          <h6><em>Song </em>: <a routerLink='/home/track/{{artist.trackId}}'>{{ artist.trackName }}</a></h6>
+          <h6><em>Genre </em>: {{ artist.primaryGenreName }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

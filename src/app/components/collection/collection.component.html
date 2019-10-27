@@ -1,0 +1,25 @@
+<div class='container'>
+
+  <div class='album-info'>
+    <img class='img-responsive' width='90%' src={{album[0].artworkUrl1000}}>
+    <h3 class='col-md-12 col-sm-12 text-center py-3'>{{album[0].collectionName}}</h3>
+    <a href='{{album[0].collectionViewUrl}}' target='_blanc'><p>View this Album on Apple Music</p></a>
+  </div>
+
+  <div class='album-tracks'>
+    <h5>Scroll to browse Album Tracks</h5>
+
+    <div class='card col-md-12 col-sm-12 my-2 text-left' *ngFor='let track of album | slice: 1; let i = index'>
+      <div *ngIf='track.previewUrl'>
+        <a routerLink='/home/track/{{track.trackId}}'>
+          <div>
+            <p>Price : {{track.trackPrice | currency}}</p>
+            <p>Release Date : {{track.releaseDate | date}}</p>
+            <p><em>{{i + 1}}</em> &#183; {{track.trackName}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
