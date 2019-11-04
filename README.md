@@ -1,4 +1,4 @@
-# Spotifly
+# spoootifly
 
 Hi there, this is a SPA (single page app) to search and browse artists, songs, albums, and everything in-between.
 
