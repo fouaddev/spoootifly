@@ -31,7 +31,9 @@ export class SearchComponent implements OnInit {
     
       let results: Artist[] = musicData.results;
       this.searchRes = results;
-
+      // If you want to limit the search results to a specific search elements
+      // You can use slice() method. For example the bellow line limit the search to 10 only
+      // this.searchRes = results.slice(0, 10);
       localStorage.setItem('userSearch', JSON.stringify(this.searchRes));
     });
   }
