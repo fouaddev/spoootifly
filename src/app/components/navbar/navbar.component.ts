@@ -7,9 +7,7 @@ import { Component, ElementRef } from '@angular/core';
 })
 export class NavbarComponent {
 
-  constructor(private eleRef: ElementRef) {
-    
-  }
+  constructor(private eleRef: ElementRef) {}
 
   ngOnInit() {}
 

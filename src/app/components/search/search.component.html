@@ -5,7 +5,7 @@
 <form>
   <div class='form-group'>
     <input type='text' name='searchStr' [(ngModel)]='searchStr' class='form-control' 
-    (keyup)='searchMusic()' placeholder='Browse by artist or song'>
+    (keyup)='musicSearch(searchStr)' placeholder='Browse by artist or song'>
   </div>
 </form>
 
