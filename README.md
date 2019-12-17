@@ -1,6 +1,6 @@
 # spoootifly
 
-Hi there, this is a SPA (single page app) to search and browse artists, songs, albums, and everything in-between.
+This is a SPA (single page app) to search and browse artists, songs, albums, and everything in-between.
 
 It's one of my personal projects that I recently built and added to my portfolio projects. 
   

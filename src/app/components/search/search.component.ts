@@ -44,12 +44,11 @@ export class SearchComponent implements OnInit {
       })
     )
     .subscribe((musicData: any) => {
-    
       let results: Artist[] = musicData.results;
 
-      // Limits search results to 10 elements only
+      // Limits search results to 10 elements
       this.searchRes = results.slice(0, 10);
-
+      
       localStorage.setItem('userSearch', JSON.stringify(this.searchRes));
     });
   } 
