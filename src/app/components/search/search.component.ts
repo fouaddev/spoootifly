@@ -47,12 +47,12 @@ export class SearchComponent implements OnInit {
     
       let results: Artist[] = musicData.results;
 
-      // Limits search results to 10 elements
+      // Limits search results to 10 elements only
       this.searchRes = results.slice(0, 10);
 
       localStorage.setItem('userSearch', JSON.stringify(this.searchRes));
     });
-  }
+  } 
 
   musicSearch(searchStr: any): any {
     this.searchKeywords.next(this.searchStr);
